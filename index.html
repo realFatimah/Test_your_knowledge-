@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;  
+    }
+
+    .image-container img {
+      border: 2px solid #78A3D4;
+      border-radius: 10%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10%;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+
+    .text-container {
+      text-align: center;
+    }
+ </style> 
+<body class="font-mono bg-gray-100">
+  <nav class="bg-[#78A3D4] mt-4 py-4">
+    <div class="flex mx-56">
+      <ul class="flex space-x-10 text-pink-50">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="animal.html">ANIMAL</a></li>
+        <li><a href="geography.html">GEOGRAPHY</a></li>
+        <li><a href="sports.html">SPORTS</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="bg-[]">
+    <nav class="bg-[] h-20 font-mono text-4xl flex pl-5 pt-7 text-slate-800 mt-2 animate__animated animate__pulse">Test Your Knowledge!</nav>
+    <h3 id="question" class="h-20 font-mono text-4xl flex pl-5 pt-2 text-slate-800 mt-2 animate__animated animate__pulse">How much do you know about these topics? Lets find out!</h3>
+    
+    <div class="text-container flex justify-around gap-2.5">
+      <div class="flex flex-col items-center">
+        <div class="relative overflow-hidden group image-container animate__animated animate__fadeInLeft">
+          <a href="animal.html">
+            <img src="images/bird.jpg" alt="animal" class="block">
+            <div class="overlay">
+              <span class="text-white text-lg">Animal</span>
+            </div>
+          </a>
+        </div>
+        <a href="animal.html"><div class="text-center mt-2 text-lg">Animal</div></a>
+      </div>
+      
+      <div class="flex flex-col items-center">
+        <div class="relative overflow-hidden group image-container animate__animated animate__fadeInUp">
+          <a href="geography.html">
+            <img src="images/beach .jpg" alt="mountain" class="block">
+            <div class="overlay">
+              <span class="text-white text-lg">Geography</span>
+            </div>
+          </a>
+        </div>
+        <a href="geography.html"><div class="text-center mt-2 text-lg">Geography</div></a>
+      </div>
+      
+      <div class="flex flex-col items-center">
+        <div class="relative overflow-hidden group image-container animate__animated animate__fadeInRight">
+          <a href="sports.html">
+            <img src="images/sports.jpg" alt="sports" class="block">
+            <div class="overlay">
+              <span class="text-white text-lg">Sports</span>
+            </div>
+          </a>
+        </div>
+        <a href="sports.html" ><div class="text-center mt-2 text-lg">Sports</div></a>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
